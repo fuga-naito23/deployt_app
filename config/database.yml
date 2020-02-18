@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: deployt_app_production
-  username: deployt_app
-  password: <%= ENV['DEPLOYT_APP_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
